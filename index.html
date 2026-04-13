@@ -1,6 +1,6 @@
 <!--
-TEMPLATE WHITE-LABEL – DUNO PSICOLOGIA | Versão Premium 10/10
-Design profissional e altamente conversivo via WhatsApp
+TEMPLATE WHITE-LABEL – DUNO PSICOLOGIA | Alta Conversão
+Design profissional focado 100% em conversão e usabilidade mobile.
 -->
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
@@ -44,6 +44,8 @@ Design profissional e altamente conversivo via WhatsApp
                     colors: {
                         primary: '#0B1120', 
                         accent: '#3b82f6',  // Blue-500
+                        whatsapp: '#25D366',
+                        'whatsapp-hover': '#1ebc59',
                         secondary: '#1E293B',
                         card: '#161E2E'
                     },
@@ -104,14 +106,14 @@ Design profissional e altamente conversivo via WhatsApp
         }
 
         .whatsapp-pulse {
-            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
             animation: pulse-whatsapp 2s infinite;
         }
 
         @keyframes pulse-whatsapp {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(34, 197, 94, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         /* Custom Scrollbar */
@@ -129,28 +131,12 @@ Design profissional e altamente conversivo via WhatsApp
             vertical-align: middle;
         }
         @media (max-width: 640px) {
-            .wz-icon { width: 1.1rem; height: 1.1rem; }
-            .btn-mobile-fix { font-size: 0.95rem !important; padding-left: 1rem !important; padding-right: 1rem !important; gap: 0.5rem !important; }
-        }
-
-        /* Mobile improvements */
-        @media (max-width: 640px) {
+            .wz-icon { width: 1.2rem; height: 1.2rem; }
+            .btn-mobile-fix { font-size: 1.1rem !important; padding: 1.25rem !important; width: 100% !important; justify-content: center !important; }
             .hero-title { font-size: 2.5rem !important; line-height: 1.15 !important; }
             .hero-sub  { font-size: 1rem !important; }
-            .section-pad { padding-top: 4rem !important; padding-bottom: 4rem !important; }
         }
 
-        /* Glassmorphism Classes */
-        /* Improved Reveal Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px) scale(0.98);
-            transition: all 0.9s cubic-bezier(0.2, 1, 0.3, 1);
-        }
-        .reveal.active {
-            opacity: 1 !important;
-            transform: translateY(0) scale(1) !important;
-        }
         .faq-card:hover {
             background: white;
             box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.08);
@@ -211,20 +197,19 @@ Design profissional e altamente conversivo via WhatsApp
                 <a href="#servicos" class="text-sm font-medium hover:text-accent transition-colors" :class="scrolled ? 'text-slate-300' : 'text-white'">Especialidades</a>
                 <a href="#feedback" class="text-sm font-medium hover:text-accent transition-colors" :class="scrolled ? 'text-slate-300' : 'text-white'">Resultados</a>
                 <a href="#faq" class="text-sm font-medium hover:text-accent transition-colors" :class="scrolled ? 'text-slate-300' : 'text-white'">Dúvidas</a>
-                <a href="#contato" class="text-sm font-medium hover:text-accent transition-colors" :class="scrolled ? 'text-slate-300' : 'text-white'">Agendar</a>
             </nav>
 
             <!-- CTA -->
             <div class="flex items-center gap-4">
-                <a href="https://wa.me/5511992876219" target="_blank" class="hidden sm:flex items-center gap-3 bg-accent hover:bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-accent/20">
+                <a href="https://wa.me/5511992876219" target="_blank" class="hidden sm:flex items-center gap-2 bg-whatsapp hover:bg-whatsapp-hover text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-whatsapp/30">
                     <svg class="wz-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Falar Agora
-            </a>
-            <button @click="mobileMenu = !mobileMenu" class="lg:hidden p-2 text-white bg-primary/20 rounded-lg">
-                <i data-lucide="menu-original" x-show="!mobileMenu"></i>
-                <i data-lucide="x" x-show="mobileMenu"></i>
-            </button>
-        </div>
+                    Fale Agora
+                </a>
+                <button @click="mobileMenu = !mobileMenu" class="lg:hidden p-2 text-white bg-primary/20 rounded-lg">
+                    <i data-lucide="menu-original" x-show="!mobileMenu"></i>
+                    <i data-lucide="x" x-show="mobileMenu"></i>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Menu -->
@@ -235,21 +220,20 @@ Design profissional e altamente conversivo via WhatsApp
                 <a @click="mobileMenu = false" href="#servicos" class="text-lg text-white font-medium text-center">Especialidades</a>
                 <a @click="mobileMenu = false" href="#feedback" class="text-lg text-white font-medium text-center">Resultados</a>
                 <a @click="mobileMenu = false" href="#faq" class="text-lg text-white font-medium text-center">Dúvidas Frequentes</a>
-                <a href="https://wa.me/5511992876219" class="bg-accent text-white py-4 rounded-xl text-center font-bold flex items-center justify-center gap-2">
-                    Agendar Consulta
+                <a href="https://wa.me/5511992876219" class="bg-whatsapp text-white py-4 rounded-xl text-center font-bold flex items-center justify-center gap-2 mt-4 text-lg">
+                    <svg class="wz-icon" viewBox="0 0 24 24" style="width: 1.5rem; height: 1.5rem;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Agende sua consulta
                 </a>
             </nav>
         </div>
     </header>
 
-    <!-- 3. Hero Section -->
+    <!-- 3. Hero Section (Foco Conversão) -->
     <section id="inicio" class="relative min-h-[85vh] sm:min-h-screen flex items-center bg-primary overflow-hidden">
         <div class="absolute inset-0 z-0 bg-slate-900">
-            <!-- Imagem premium com ajuste para mobile -->
-            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2000&auto=format&fit=crop" alt="Consultório de Psicologia" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-[75%_center] sm:object-center grayscale opacity-60 mix-blend-overlay">
-            <!-- Gradiente dinâmico para mobile vs desktop -->
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2000&auto=format&fit=crop" alt="Consultório de Psicologia" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-[75%_center] sm:object-center grayscale opacity-50 mix-blend-overlay">
             <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-transparent sm:bg-gradient-to-r sm:from-primary/95 sm:via-primary/70 sm:via-40% sm:to-transparent"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(59,130,246,0.15),transparent_40%)]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(59,130,246,0.1),transparent_40%)]"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10 pt-20">
@@ -259,42 +243,25 @@ Design profissional e altamente conversivo via WhatsApp
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
                     </span>
-                    Terapia Presencial e Online
+                    Profissionais Disponíveis Hoje
                 </div>
                 
-                <h1 class="hero-title text-4xl sm:text-5xl md:text-8xl font-black text-white leading-[1.05] tracking-tight mb-8 reveal" style="transition-delay: 200ms;">
-                    Sua Mente em <br><span class="text-accent underline decoration-white/10 underline-offset-8">Equilíbrio</span> HOJE<span class="text-accent">.</span>
+                <h1 class="hero-title text-5xl sm:text-6xl md:text-8xl font-black text-white leading-[1.05] tracking-tight mb-8 reveal" style="transition-delay: 200ms;">
+                    Sua Mente em <br><span class="text-accent underline decoration-white/10 underline-offset-8">Paz</span> Novamente<span class="text-accent">.</span>
                 </h1>
                 
                 <p class="hero-sub text-lg sm:text-2xl text-slate-300 mb-12 leading-relaxed max-w-2xl reveal" style="transition-delay: 400ms;">
-                    Atendimento clínico <span class="text-white font-bold">humanizado e fundamentado</span> em ciência. Acolhimento profundo focado em qualidade de vida e resultados.
+                    Atendimento humanizado para ansiedade, relacionamentos ou autoconhecimento. <span class="text-white font-bold">Inicie sua mudança exatamente agora.</span>
                 </p>
 
-                <div class="flex flex-col sm:flex-row items-center gap-4 reveal" style="transition-delay: 600ms;">
-                    <a href="https://wa.me/5511992876219" class="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-blue-600 text-white rounded-2xl font-bold flex items-center justify-center gap-3 transition-all shadow-2xl shadow-accent/30 transform hover:-translate-y-1 group">
-                        <i data-lucide="calendar" class="w-5 h-5 transition-transform group-hover:scale-110"></i>
-                        <span class="whitespace-nowrap">Agendar Sessão</span>
-                    </a>
-                    <a href="#servicos" class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/10 backdrop-blur-md rounded-2xl font-bold flex items-center justify-center transition-all text-center">
-                        Conhecer Áreas
+                <!-- CTA Imediato -->
+                <div class="flex reveal" style="transition-delay: 600ms;">
+                    <a href="https://wa.me/5511992876219" class="w-full sm:w-auto px-10 py-5 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-2xl font-bold flex items-center justify-center gap-3 transition-all shadow-xl hover:shadow-whatsapp/40 hover:-translate-y-1 btn-mobile-fix">
+                        <svg class="wz-icon" style="width:1.8em;height:1.8em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <span class="text-xl">Agende sua consulta</span>
                     </a>
                 </div>
 
-                <!-- Trust Badges -->
-                <div class="mt-16 flex flex-wrap items-center gap-8 opacity-70 reveal" style="transition-delay: 800ms;">
-                    <div class="flex items-center gap-2 text-white">
-                        <i data-lucide="shield" class="text-accent"></i>
-                        <span class="text-sm font-medium">Sigilo Absoluto</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-white">
-                        <i data-lucide="award" class="text-accent"></i>
-                        <span class="text-sm font-medium">CRP Ativo</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-white">
-                        <i data-lucide="heart" class="text-accent"></i>
-                        <span class="text-sm font-medium">Acolhimento Integral</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -315,31 +282,19 @@ Design profissional e altamente conversivo via WhatsApp
                 
                 <div class="reveal" style="transition-delay: 200ms;">
                     <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-4">Sobre a DUNO Psicologia</h2>
-                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">Excelência em Cuidado e Desenvolvimento Humano.</h3>
+                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">Excelência em Cuidado Humano.</h3>
                     <p class="text-slate-600 text-lg leading-relaxed mb-6">
-                        Na DUNO, compreendemos que cada jornada emocional é única. Nosso trabalho une o melhor da ciência psicológica com a profundidade da escuta humana, criando um espaço seguro para seu autodescobrimento.
+                        Compreendemos que toda jornada é única. Nossa abordagem une o melhor da ciência psicológica com a escuta profunda, criando um espaço altamente seguro para resolução dos seus conflitos.
                     </p>
                     <p class="text-slate-600 text-lg leading-relaxed mb-10">
-                        Nossa equipe clínica é treinada pelas melhores instituições e possui especializações focadas em oferecer transformações profundas com um atendimento ético e transparente.
+                        Não espere os problemas transbordarem. Cuidar de si mesmo é o melhor investimento que pode fazer hoje.
                     </p>
                     
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-primary mb-1 counter" data-target="3500">0</div>
-                            <div class="text-slate-500 text-sm">Vidas Transformadas</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-primary mb-1 counter" data-target="10">0</div>
-                            <div class="text-slate-500 text-sm">Ano de Clínica</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-primary mb-1 counter" data-target="100">0</div>
-                            <div class="text-slate-500 text-sm">% Sigilo Clínico</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-primary mb-1 counter" data-target="15">0</div>
-                            <div class="text-slate-500 text-sm">Dias de Agenda</div>
-                        </div>
+                    <!-- CTA Section Saber Mais -->
+                    <div class="mb-10 block">
+                        <a href="https://wa.me/5511992876219" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-whatsapp hover:bg-whatsapp-hover text-white px-8 py-4 rounded-xl font-bold transition-all shadow-md shadow-whatsapp/20 btn-mobile-fix text-lg">
+                            Fale agora pelo WhatsApp <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -350,9 +305,9 @@ Design profissional e altamente conversivo via WhatsApp
     <section id="servicos" class="py-24 bg-primary text-white">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-20 reveal">
-                <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-4">Nossas Especialidades</h2>
-                <h3 class="text-4xl md:text-5xl font-bold mb-6">Atendimento Clínico Especializado</h3>
-                <p class="text-slate-400">Abordagens focadas e validadas cientificamente para cada tipo de sofrimento e objetivo de desenvolvimento emocional, para adultos, jovens e casais.</p>
+                <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-4">Nossos Serviços</h2>
+                <h3 class="text-4xl md:text-5xl font-bold mb-6">Soluções Eficazes.</h3>
+                <p class="text-slate-400 text-lg mb-8">Nossos especialistas focam naquilo que mais te aflige hoje para proporcionar autonomia amanhã. Qual é o seu momento?</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -365,15 +320,13 @@ Design profissional e altamente conversivo via WhatsApp
                     <div class="p-10 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-4">
                             <h4 class="text-2xl font-bold text-white tracking-tight">Terapia Individual</h4>
-                            <span class="bg-accent/10 text-accent text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-accent/20">Adultos</span>
                         </div>
                         <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Autoconhecimento profundo e estruturado</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Compreensão de padrões de comportamento</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Superação de traumas e bloqueios emocionais</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Supere traumas e bloqueios emocionais</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Construa uma melhor relação consigo mesmo</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                             Agendar Primeira Sessão
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
+                             Agendar Consulta
                         </a>
                     </div>
                 </div>
@@ -387,15 +340,13 @@ Design profissional e altamente conversivo via WhatsApp
                     <div class="p-10 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-4">
                             <h4 class="text-2xl font-bold text-white tracking-tight">Terapia de Casal</h4>
-                            <span class="bg-blue-500/10 text-blue-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-blue-500/20">Relacionamentos</span>
                         </div>
                         <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Mediação de conflitos e comunicação assertiva</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Resgate da intimidade e do vínculo afetivo</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Alinhamento de expectativas e projetos de vida</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Resgate o diálogo, paciência e a intimidade</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Mediação inteligente para focar em soluções</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                             Agendar Avaliação
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
+                             Agendar Consulta
                         </a>
                     </div>
                 </div>
@@ -409,15 +360,13 @@ Design profissional e altamente conversivo via WhatsApp
                     <div class="p-10 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-4">
                             <h4 class="text-2xl font-bold text-white tracking-tight">Terapia Familiar</h4>
-                            <span class="bg-amber-500/10 text-amber-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-amber-500/20">Dinâmica Mental</span>
                         </div>
                         <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Compreensão de papéis e regras familiares</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Intervenção em crises e momentos de luto</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Fortalecimento do ambiente afetivo domiciliar</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Intervenções ativas em crises ou lutos difíceis</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Fortalecimento do respeito e vínculos vitais</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                             Falar com Equipe
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
+                             Agendar Consulta
                         </a>
                     </div>
                 </div>
@@ -430,16 +379,14 @@ Design profissional e altamente conversivo via WhatsApp
                     </div>
                     <div class="p-10 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-2xl font-bold text-white tracking-tight">Ansiedade e Estresse</h4>
-                            <span class="bg-accent/10 text-accent text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-accent/20">Foco Vital</span>
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Ansiedade / Pânico</h4>
                         </div>
                         <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Técnicas para controle de pânico e fobias</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Estratégias de manejo do esgotamento (Burnout)</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Ferramentas de mindfulness e regulação emocional</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Pare os pensamentos acelerados com técnicas ativas</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Ferramentas para controle de pânico, fobias, burnout</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                             Agendar Sessão
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
+                             Agendar Consulta
                         </a>
                     </div>
                 </div>
@@ -452,16 +399,14 @@ Design profissional e altamente conversivo via WhatsApp
                     </div>
                     <div class="p-10 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-2xl font-bold text-white tracking-tight">Tratamento de Depressão</h4>
-                            <span class="bg-red-500/10 text-red-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-red-500/20">Cuidado Integral</span>
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Depressão</h4>
                         </div>
                         <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Abordagem compassiva e livre de julgamentos</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Reconstrução gradual da esperança e energia vitral</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Suporte multidisciplinar se necessário</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Abordagem compassiva focada em reerguer sua energia</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Reconstrução da rotina clínica altamente profissional</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                             Agendar Acolhimento
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
+                             Agendar Consulta
                         </a>
                     </div>
                 </div>
@@ -474,15 +419,13 @@ Design profissional e altamente conversivo via WhatsApp
                     </div>
                     <div class="p-10 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-2xl font-bold text-white tracking-tight">Jovens e Adolescentes</h4>
-                            <span class="bg-purple-500/10 text-purple-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-purple-500/20">Desenvolvimento</span>
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Adolescentes</h4>
                         </div>
                         <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Navegação nas crises de identidade da juventude</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Manejo de bullying, tecnologia e pressões sociais</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Melhora significativa na comunicação em casa</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Maneje bullying, pressões e crises da juventude</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Ajude seu filho(a) hoje com terapeutas especialistas</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
                              Agendar Consulta
                         </a>
                     </div>
@@ -497,15 +440,13 @@ Design profissional e altamente conversivo via WhatsApp
                     <div class="p-10 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-4">
                             <h4 class="text-2xl font-bold text-white tracking-tight">Autoconhecimento</h4>
-                            <span class="bg-indigo-500/10 text-indigo-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-indigo-500/20">Potencial</span>
                         </div>
                         <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Exploração de virtudes, valores e metas</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Aumento radical de inteligência emocional</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Melhoria nas decisões e clareza de vida</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Crie melhores decisões expandindo horizontes</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Torne-se mais resiliente, objetivo e inteligente</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                             Iniciar Jornada
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
+                             Agendar Consulta
                         </a>
                     </div>
                 </div>
@@ -518,16 +459,14 @@ Design profissional e altamente conversivo via WhatsApp
                     </div>
                     <div class="p-10 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-2xl font-bold text-white tracking-tight">Orientação Clínica</h4>
-                            <span class="bg-cyan-500/10 text-cyan-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-cyan-500/20">Carreiras</span>
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Orientação Profissional</h4>
                         </div>
                         <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Alinhamento de propósito e habilidades</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Preparação psicológica para transições</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Testes vocacionais baseados na clínica moderna</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Descubra talentos e realinhe sua atual carreira</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Transições de forma segura com testes psicológicos de apoio</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                             Agendar Análise
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
+                             Agendar Consulta
                         </a>
                     </div>
                 </div>
@@ -541,187 +480,138 @@ Design profissional e altamente conversivo via WhatsApp
                     <div class="p-10 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-4">
                             <h4 class="text-2xl font-bold text-white tracking-tight">Atendimento Online</h4>
-                            <span class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-emerald-500/20">Flexibilidade</span>
                         </div>
                         <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Mesma eficácia do presencial onde você estiver</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Plataforma com criptografia avançada e sigilo</li>
-                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Ideal para agendas lotadas e brasileiros no exterior</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Para rotinas corridas. Fale com seu psicólogo do conforto de onde estiver.</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Sigilo digital inquebrável, segurança máxima.</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                             Ver Horários
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
+                             Agendar Consulta
                         </a>
                     </div>
                 </div>
             </div>
             
             <div class="mt-16 text-center reveal">
-                <a href="https://wa.me/5511992876219" class="bg-primary text-white px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-4 mx-auto w-fit hover:bg-slate-900 transition-all shadow-xl btn-mobile-fix">
-                    <span>Quero Iniciar Minha Terapia</span>
-                    <i data-lucide="arrow-right" class="w-5 h-5 text-accent"></i>
+                <a href="https://wa.me/5511992876219" class="bg-whatsapp hover:bg-whatsapp-hover text-white px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-4 mx-auto w-fit transition-all shadow-xl shadow-whatsapp/30 btn-mobile-fix text-lg">
+                    <svg class="wz-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Fale agora pelo WhatsApp
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 6. Como Funciona (Timeline) -->
+    <!-- 6. Como Funciona -->
     <section id="como-funciona" class="py-24 bg-primary text-white overflow-hidden border-t border-white/5">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-20 reveal">
+            <div class="text-center mb-16 reveal">
                 <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-4">A Jornada na DUNO</h2>
-                <h3 class="text-4xl font-bold">Acolhimento em 5 Passos</h3>
+                <h3 class="text-4xl font-bold">Simples e Muito Rápido.</h3>
             </div>
 
             <div class="relative max-w-5xl mx-auto">
-                <!-- Timeline Line (Desktop) -->
                 <div class="hidden lg:block absolute top-[6.5rem] left-0 w-full h-0.5 bg-white/10"></div>
                 
-                <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 relative">
                     <!-- Step 1 -->
                     <div class="text-center reveal" style="transition-delay: 100ms;">
                         <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-8 relative z-10 shadow-xl shadow-accent/20">
-                            <i data-lucide="message-square" class="w-10 h-10 text-white"></i>
+                            <i data-lucide="message-circle" class="w-10 h-10 text-white"></i>
                         </div>
-                        <h5 class="text-xl font-bold mb-4">1. O Primeiro Passo</h5>
-                        <p class="text-slate-400 text-sm">Agendamento rápido via WhatsApp.</p>
+                        <h5 class="text-xl font-bold mb-4">1. Nos chame agora</h5>
+                        <p class="text-slate-400 text-sm">Clique em qualquer botão do site e fale conosco no WhatsApp.</p>
                     </div>
                     <!-- Step 2 -->
                     <div class="text-center reveal" style="transition-delay: 200ms;">
                         <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-8 relative z-10 shadow-xl shadow-accent/20">
-                            <i data-lucide="heart-handshake" class="w-10 h-10 text-white"></i>
+                            <i data-lucide="calendar-check" class="w-10 h-10 text-white"></i>
                         </div>
-                        <h5 class="text-xl font-bold mb-4">2. Acolhimento</h5>
-                        <p class="text-slate-400 text-sm">Escuta inicial empática e direcionamento.</p>
+                        <h5 class="text-xl font-bold mb-4">2. Agendamento Rápido</h5>
+                        <p class="text-slate-400 text-sm">Encontramos imediatamente a melhor opção para a sua rotina.</p>
                     </div>
                     <!-- Step 3 -->
                     <div class="text-center reveal" style="transition-delay: 300ms;">
                         <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-8 relative z-10 shadow-xl shadow-accent/20">
-                            <i data-lucide="user-check" class="w-10 h-10 text-white"></i>
+                            <i data-lucide="heart-handshake" class="w-10 h-10 text-white"></i>
                         </div>
-                        <h5 class="text-xl font-bold mb-4">3. A Dinâmica</h5>
-                        <p class="text-slate-400 text-sm">Conexão clínica com seu terapeuta ideal.</p>
+                        <h5 class="text-xl font-bold mb-4">3. Acolhimento Único</h5>
+                        <p class="text-slate-400 text-sm">Realize a sua primeira sessão para alinhamento profissional.</p>
                     </div>
                     <!-- Step 4 -->
                     <div class="text-center reveal" style="transition-delay: 400ms;">
                         <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-8 relative z-10 shadow-xl shadow-accent/20">
-                            <i data-lucide="calendar-heart" class="w-10 h-10 text-white"></i>
-                        </div>
-                        <h5 class="text-xl font-bold mb-4">4. As Sessões</h5>
-                        <p class="text-slate-400 text-sm">Encontros focados no seu bem-estar diário.</p>
-                    </div>
-                    <!-- Step 5 -->
-                    <div class="text-center reveal" style="transition-delay: 500ms;">
-                        <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-8 relative z-10 shadow-xl shadow-accent/20">
                             <i data-lucide="sun" class="w-10 h-10 text-white"></i>
                         </div>
-                        <h5 class="text-xl font-bold mb-4">5. Evolução</h5>
-                        <p class="text-slate-400 text-sm">Autonomia, percepção de valor e saúde mental.</p>
+                        <h5 class="text-xl font-bold mb-4">4. Melhoras Reais</h5>
+                        <p class="text-slate-400 text-sm">Resultados duradouros e muito mais qualidade de vida.</p>
                     </div>
                 </div>
+            </div>
+            
+            <div class="mt-20 text-center reveal">
+                <a href="https://wa.me/5511992876219" class="bg-whatsapp hover:bg-whatsapp-hover text-white px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-4 mx-auto w-fit transition-all shadow-xl shadow-whatsapp/30 btn-mobile-fix text-lg">
+                    <span>Atendimento imediato</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5 text-white"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 7. Depoimentos Ultra-Premium -->
+    <!-- 7. Depoimentos -->
     <section id="feedback" class="py-32 bg-slate-50 relative overflow-hidden">
-        <!-- Background Decor -->
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] -mr-64 -mt-64"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] -ml-64 -mb-64"></div>
-
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col lg:flex-row items-end justify-between mb-28 gap-8 reveal">
                 <div class="max-w-2xl">
-                    <div class="inline-flex items-center gap-3 text-accent font-bold uppercase text-[10px] tracking-[0.4em] mb-8 bg-accent/5 px-4 py-2 rounded-full border border-accent/10">
-                        <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span> Transformações DUNO
-                    </div>
-                    <h2 class="text-5xl lg:text-8xl font-black text-primary leading-[0.9] tracking-tighter">
-                        O que nossos <br> <span class="text-accent underline decoration-primary/5 underline-offset-8">pacientes</span> dizem.
+                    <h2 class="text-5xl lg:text-7xl font-black text-primary leading-[0.9] tracking-tighter mb-4">
+                        Quem já encontrou <br>seu <span class="text-accent underline decoration-primary/5 underline-offset-8">equilíbrio</span>
                     </h2>
-                </div>
-                <div class="bg-white p-6 rounded-3xl shadow-xl flex items-center gap-6 border border-slate-100 mb-4">
-                    <div class="flex -space-x-3">
-                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md grayscale" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="">
-                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md grayscale" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop" alt="">
-                        <img class="w-12 h-12 rounded-full border-4 border-white shadow-md grayscale" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop" alt="">
-                    </div>
-                    <div class="text-sm">
-                        <div class="flex text-amber-400 gap-0.5 mb-1">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </div>
-                        <p class="text-primary font-bold">Avaliação Máxima Real</p>
-                    </div>
+                    <p class="text-slate-500 text-xl font-medium">Veja as transformações reais da clínica DUNO.</p>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 <!-- Card 1 -->
-                <div class="bg-white p-12 rounded-[3.5rem] shadow-sm border border-slate-100 relative group hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 reveal" style="transition-delay: 100ms;">
-                    <div class="absolute top-10 right-10 text-8xl font-serif text-accent opacity-5 group-hover:opacity-20 transition-opacity">“</div>
-                    <div class="flex text-amber-500 gap-1 mb-8">
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                    </div>
-                    <p class="text-slate-600 text-xl leading-[1.6] mb-12 font-medium italic">
-                        Um espaço realmente <span class="text-primary font-bold not-italic">acolhedor</span>. Eu tinha receio da terapia, mas a equipe da DUNO me fez sentir em casa rapidamente. O profissionalismo e sigilo clínico me deram incrível segurança.
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 relative group hover:shadow-2xl transition-all duration-300 reveal" style="transition-delay: 100ms;">
+                    <div class="flex text-amber-500 gap-1 mb-6"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                        "Ter minha primeira sessão sem medo era o que eu precisava. O acolhimento via WhatsApp foi muito veloz e o atendimento é absurdamente humano."
                     </p>
-                    <div class="flex items-center gap-5">
-                        <div class="relative">
-                            <div class="w-16 h-16 rounded-full bg-slate-200 border-2 border-accent/20 flex items-center justify-center font-bold text-slate-400">R.</div>
-                            <div class="absolute -right-1 -bottom-1 bg-accent text-white p-1 rounded-full border-2 border-white">
-                                <i data-lucide="heart" class="w-3 h-3"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h6 class="font-bold text-primary text-xl tracking-tight">Paciente R.</h6>
-                            <p class="text-slate-400 text-sm font-semibold uppercase tracking-widest">Terapia Individual</p>
-                        </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">P.</div>
+                        <h6 class="font-bold text-primary text-md">Paciente Anônimo</h6>
                     </div>
                 </div>
 
-                <!-- Card 2 (Destaque Central) -->
-                <div class="bg-primary p-12 rounded-[3.5rem] shadow-2xl relative group transform lg:-translate-y-8 transition-all duration-500 reveal" style="transition-delay: 200ms;">
-                    <div class="absolute top-10 right-10 text-8xl font-serif text-accent opacity-10 group-hover:opacity-30 transition-opacity">“</div>
-                    <div class="flex text-accent gap-1 mb-8">
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                    </div>
-                    <p class="text-slate-200 text-xl leading-[1.6] mb-12 font-medium italic">
-                        Iniciamos a terapia com a possibilidade de romper nosso casamento. Com as sessões, <span class="text-white font-bold not-italic border-b-2 border-accent/30">encontramos a raiz dos conflitos.</span> Só temos gratidão pela dedicação excepcional.
+                <!-- Card 2 -->
+                <div class="bg-primary p-10 rounded-[2.5rem] shadow-xl relative group transform lg:-translate-y-4 transition-all duration-300 reveal" style="transition-delay: 200ms;">
+                    <div class="flex text-amber-500 gap-1 mb-6"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+                    <p class="text-white text-lg leading-relaxed mb-8">
+                        "Agendei por que estava sofrendo com estresse grave no trabalho. Com apenas três semanas os exercícios psicológicos aliviaram todo o aperto no peito que eu sentia." 
                     </p>
-                    <div class="flex items-center gap-5">
-                        <div class="relative">
-                            <div class="w-16 h-16 rounded-full bg-slate-800 border-2 border-accent flex items-center justify-center font-bold text-slate-400">M. e L.</div>
-                            <div class="absolute -right-1 -bottom-1 bg-accent text-white p-1 rounded-full border-2 border-primary">
-                                <i data-lucide="heart" class="w-3 h-3"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h6 class="font-bold text-white text-xl tracking-tight">Casal M. e L.</h6>
-                            <p class="text-slate-400 text-sm font-semibold uppercase tracking-widest">Terapia de Casal</p>
-                        </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center font-bold text-slate-300">T.</div>
+                        <h6 class="font-bold text-white text-md">Terapia para Ansiedade</h6>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white p-12 rounded-[3.5rem] shadow-sm border border-slate-100 relative group hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 reveal" style="transition-delay: 300ms;">
-                    <div class="absolute top-10 right-10 text-8xl font-serif text-accent opacity-5 group-hover:opacity-20 transition-opacity">“</div>
-                    <div class="flex text-amber-500 gap-1 mb-8">
-                        <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                    </div>
-                    <p class="text-slate-600 text-xl leading-[1.6] mb-12 font-medium italic">
-                        Fazer o modal online foi a melhor escolha. Moro fora do país e manter a sintonia em português com minha terapeuta foi algo <span class="text-primary font-bold not-italic underline decoration-accent/20 underline-offset-4">espetacular</span> e muito prático.
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 relative group hover:shadow-2xl transition-all duration-300 reveal" style="transition-delay: 300ms;">
+                    <div class="flex text-amber-500 gap-1 mb-6"><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                        "Incrível o fato de resolvermos problemas do casamento sem brigas. Foi a melhor decisão ter contatado a clínica para nos apoiar neste momento. Altamente recomendados!"
                     </p>
-                    <div class="flex items-center gap-5">
-                        <div class="relative">
-                            <div class="w-16 h-16 rounded-full bg-slate-200 border-2 border-accent/20 flex items-center justify-center font-bold text-slate-400">A.</div>
-                            <div class="absolute -right-1 -bottom-1 bg-accent text-white p-1 rounded-full border-2 border-white">
-                                <i data-lucide="globe" class="w-3 h-3"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <h6 class="font-bold text-primary text-xl tracking-tight">Paciente A.</h6>
-                            <p class="text-slate-400 text-sm font-semibold uppercase tracking-widest">Terapia Online</p>
-                        </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">C.</div>
+                        <h6 class="font-bold text-primary text-md">Terapia de Casal</h6>
                     </div>
                 </div>
+            </div>
+            
+            <div class="text-center reveal">
+                <a href="https://wa.me/5511992876219" class="bg-whatsapp hover:bg-whatsapp-hover text-white px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-4 mx-auto w-fit transition-all shadow-xl shadow-whatsapp/30 btn-mobile-fix text-lg">
+                    <svg class="wz-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Quero agendar minha consulta
+                </a>
             </div>
         </div>
     </section>
@@ -730,128 +620,51 @@ Design profissional e altamente conversivo via WhatsApp
     <section id="faq" class="py-24 bg-slate-50">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-16 reveal">
-                <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-4">Dúvidas Frequentes</h2>
-                <h3 class="text-4xl font-bold text-primary">Tudo o que Você Precisa Saber sobre Iniciar</h3>
+                <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-4">Ainda com Dúvidas?</h2>
+                <h3 class="text-4xl font-bold text-primary">Esclareça E Venha Para a Terapia</h3>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8" x-data="{ openFaq: null }">
+            <div class="grid gap-6 mb-12" x-data="{ openFaq: null }">
                 <!-- Item 1 -->
-                <div class="faq-card bg-white rounded-[2rem] reveal overflow-hidden border border-slate-100">
-                    <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full px-8 py-7 flex items-center justify-between text-left transition-all" :class="openFaq === 1 ? 'bg-slate-50' : ''">
-                        <span class="font-bold text-lg text-primary flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
-                                <i data-lucide="clock" class="w-5 h-5"></i>
-                            </div>
-                            Quanto tempo dura uma sessão?
-                        </span>
-                        <i data-lucide="plus" class="text-accent transition-transform duration-500" :class="openFaq === 1 ? 'rotate-45 scale-125' : ''"></i>
+                <div class="faq-card bg-white rounded-2xl reveal overflow-hidden border border-slate-200">
+                    <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full px-8 py-6 flex items-center justify-between text-left transition-all">
+                        <span class="font-bold text-lg text-primary">Quanto tempo dura a sessão?</span>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-300" :class="openFaq === 1 ? 'rotate-45' : ''"></i>
                     </button>
-                    <div x-show="openFaq === 1" x-collapse class="px-8 pb-7 text-slate-600 bg-slate-50 leading-relaxed border-t border-slate-100/50">
-                        Nossas sessões individuais e de casal possuem duração média de 50 minutos semanais, desenhadas para garantir o foco e eficácia necessários a cada encontro.
+                    <div x-show="openFaq === 1" x-collapse class="px-8 pb-6 text-slate-600 bg-white leading-relaxed">
+                        Nossas sessões padrão duram em média 50 minutos semanais para permitir foco exclusivo na sua vida.
                     </div>
                 </div>
-
                 <!-- Item 2 -->
-                <div class="faq-card bg-white rounded-[2rem] reveal overflow-hidden border border-slate-100">
-                    <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full px-8 py-7 flex items-center justify-between text-left transition-all" :class="openFaq === 2 ? 'bg-slate-50' : ''">
-                        <span class="font-bold text-lg text-primary flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
-                                <i data-lucide="shield" class="w-5 h-5"></i>
-                            </div>
-                            Tudo é mantido em sigilo?
-                        </span>
-                        <i data-lucide="plus" class="text-accent transition-transform duration-500" :class="openFaq === 2 ? 'rotate-45 scale-125' : ''"></i>
+                <div class="faq-card bg-white rounded-2xl reveal overflow-hidden border border-slate-200">
+                    <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full px-8 py-6 flex items-center justify-between text-left transition-all">
+                        <span class="font-bold text-lg text-primary">Tudo o que falar é mantido em sigilo?</span>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-300" :class="openFaq === 2 ? 'rotate-45' : ''"></i>
                     </button>
-                    <div x-show="openFaq === 2" x-collapse class="px-8 pb-7 text-slate-600 bg-slate-50 leading-relaxed border-t border-slate-100/50">
-                        Absolutamente. Trabalhamos sob o estrito código de ética do Conselho Regional de Psicologia, mantendo sigilo inquebrável de tudo que é pontuado na clínica.
+                    <div x-show="openFaq === 2" x-collapse class="px-8 pb-6 text-slate-600 bg-white leading-relaxed">
+                        Claro. Rigoroso contrato de sigilo protegido pelo Conselho Regional de Psicologia. Sua segurança inicial é a prioridade.
                     </div>
                 </div>
-
-                <!-- Item 3 -->
-                <div class="faq-card bg-white rounded-[2rem] reveal overflow-hidden border border-slate-100">
-                    <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full px-8 py-7 flex items-center justify-between text-left transition-all" :class="openFaq === 3 ? 'bg-slate-50' : ''">
-                        <span class="font-bold text-lg text-primary flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
-                                <i data-lucide="globe" class="w-5 h-5"></i>
-                            </div>
-                            Como é a terapia online?
-                        </span>
-                        <i data-lucide="plus" class="text-accent transition-transform duration-500" :class="openFaq === 3 ? 'rotate-45 scale-125' : ''"></i>
-                    </button>
-                    <div x-show="openFaq === 3" x-collapse class="px-8 pb-7 text-slate-600 bg-slate-50 leading-relaxed border-t border-slate-100/50">
-                        O processo possui a exata mesma eficácia normativa que o presencial. Você fará por vídeo chamada onde se sinta acolhido(a), otimizando a rotina do seu dia a dia.
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="faq-card bg-white rounded-[2rem] reveal overflow-hidden border border-slate-100">
-                    <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full px-8 py-7 flex items-center justify-between text-left transition-all" :class="openFaq === 4 ? 'bg-slate-50' : ''">
-                        <span class="font-bold text-lg text-primary flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
-                                <i data-lucide="activity" class="w-5 h-5"></i>
-                            </div>
-                            Para quem é indicado?
-                        </span>
-                        <i data-lucide="plus" class="text-accent transition-transform duration-500" :class="openFaq === 4 ? 'rotate-45 scale-125' : ''"></i>
-                    </button>
-                    <div x-show="openFaq === 4" x-collapse class="px-8 pb-7 text-slate-600 bg-slate-50 leading-relaxed border-t border-slate-100/50">
-                        É indicado para qualquer pessoa buscando lidar melhor com ansiedade, tristeza profunda, relacionamentos desafiadores, lutos, e quem almeja uma forte expansão em clareza pessoal e profissional.
-                    </div>
-                </div>
+            </div>
+            
+            <div class="text-center reveal">
+                <a href="https://wa.me/5511992876219" class="bg-whatsapp hover:bg-whatsapp-hover text-white px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-4 mx-auto w-fit transition-all shadow-xl shadow-whatsapp/30 btn-mobile-fix text-lg">
+                    Tirar outras dúvidas agora
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 9. Contato & Mapa -->
+    <!-- 9. Contato Final -->
     <section id="contato" class="py-24 bg-white reveal">
         <div class="container mx-auto px-6">
-            <div class="bg-primary rounded-[3rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
-                <div class="lg:w-1/2 p-12 md:p-20">
-                    <h3 class="text-4xl font-bold text-white mb-8">Agende Sua Primeira Avaliação.</h3>
-                    <div class="space-y-8 mb-12">
-                        <div class="flex items-center gap-5">
-                            <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center text-accent">
-                                <i data-lucide="message-circle"></i>
-                            </div>
-                            <div>
-                                <h6 class="text-white font-bold">Atendimento Online/WhatsApp</h6>
-                                <p class="text-slate-400">(11) 99287-6219 / Agendamentos</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-5">
-                            <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center text-accent">
-                                <i data-lucide="mail"></i>
-                            </div>
-                            <div>
-                                <h6 class="text-white font-bold">Contato Clínico</h6>
-                                <p class="text-slate-400">contato@dunopsicologia.com.br</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-5">
-                            <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center text-accent">
-                                <i data-lucide="map-pin"></i>
-                            </div>
-                            <div>
-                                <h6 class="text-white font-bold">Clínica Presencial</h6>
-                                <p class="text-slate-400">Av. Faria Lima, 2000 - São Paulo/SP</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="https://wa.me/5511992876219" class="w-full py-5 bg-accent hover:bg-blue-600 text-white rounded-2xl font-bold flex items-center justify-center gap-3 transition-all transform hover:scale-[1.02] btn-mobile-fix">
-                        <svg class="wz-icon" style="width:1.6em;height:1.6em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        Falar com Recepção
-                    </a>
-                </div>
-                
-                <div class="lg:w-1/2 relative min-h-[250px] lg:min-h-[auto] rounded-[2rem] overflow-hidden m-4 shadow-inner">
-                    <!-- Google Maps Placeholder (Embed realistic style) -->
-                    <div class="absolute inset-0 grayscale hover:grayscale-0 transition-all duration-700">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116964.8465697262!2d-46.73244675!3d-23.51458885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce597d3419357d%3A0xe96431945f3c5b52!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1711915000000!5m2!1spt-BR!2sbr" 
-                            width="100%" height="100%" loading="lazy" class="border-none"></iframe>
-                    </div>
-                </div>
+            <div class="bg-primary rounded-[3rem] overflow-hidden shadow-2xl flex flex-col items-center justify-center p-12 md:p-20 text-center max-w-4xl mx-auto">
+                <h3 class="text-5xl font-bold text-white mb-6">Pronto(a) para Iniciar?</h3>
+                <p class="text-xl text-slate-300 mb-12 max-w-2xl">Não tenha medo de priorizar sua saúde mental hoje. Clique no botão abaixo para entrarmos em contato IMEDIATAMENTE.</p>
+                <a href="https://wa.me/5511992876219" class="w-full sm:w-auto px-12 py-6 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-full font-black flex items-center justify-center gap-4 transition-all transform hover:scale-[1.05] shadow-2xl shadow-whatsapp/50 text-xl btn-mobile-fix">
+                    <svg class="wz-icon" style="width:2rem;height:2rem" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Falar agora pelo WhatsApp
+                </a>
             </div>
         </div>
     </section>
@@ -860,66 +673,35 @@ Design profissional e altamente conversivo via WhatsApp
     <footer class="bg-primary pt-24 pb-12 text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.05),transparent_50%)]"></div>
         <div class="container mx-auto px-6 relative z-10">
-            <div class="grid md:grid-cols-4 gap-16 border-b border-white/5 pb-20">
-                <div class="col-span-2">
-                    <div class="flex items-center gap-2 mb-8">
-                        <div class="bg-accent p-2 rounded-xl">
-                            <i data-lucide="brain" class="w-7 h-7 text-white"></i>
-                        </div>
-                        <span class="text-3xl font-bold tracking-tight">DUNO<span class="text-accent">.</span></span>
+            <div class="text-center pb-10">
+                <a href="#" class="flex items-center justify-center gap-2 mb-6">
+                    <div class="bg-accent p-2 rounded-xl">
+                        <i data-lucide="brain" class="w-7 h-7 text-white"></i>
                     </div>
-                    <p class="text-slate-400 max-w-sm mb-10 leading-relaxed text-lg">
-                        Promovendo autonomia e inteligência emocional em todas as fases da vida. Sua mente em primeiro plano.
-                    </p>
-                    <div class="flex gap-5">
-                        <a href="#" class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition-all transform hover:-translate-y-1 shadow-lg"><i data-lucide="instagram" class="w-6 h-6"></i></a>
-                        <a href="#" class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition-all transform hover:-translate-y-1 shadow-lg"><i data-lucide="facebook" class="w-6 h-6"></i></a>
-                        <a href="#" class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition-all transform hover:-translate-y-1 shadow-lg"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h5 class="text-white font-bold mb-8 text-xl">Navegação</h5>
-                    <ul class="space-y-4 text-slate-400">
-                        <li><a href="#" class="footer-link hover:text-accent">Início</a></li>
-                        <li><a href="#sobre" class="footer-link hover:text-accent">Sobre a Clínica</a></li>
-                        <li><a href="#servicos" class="footer-link hover:text-accent">Especialidades</a></li>
-                        <li><a href="#feedback" class="footer-link hover:text-accent">Resultados</a></li>
-                        <li><a href="#faq" class="footer-link hover:text-accent">Dúvidas Clínicas</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h5 class="text-white font-bold mb-8 text-xl">Autoridade Técnica</h5>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-3 text-slate-400 text-sm bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-accent/30 transition-all">
-                            <i data-lucide="award" class="text-accent w-5 h-5 shrink-0"></i>
-                            Profissionais com CRP Ativo
-                        </div>
-                        <div class="flex items-center gap-3 text-slate-400 text-sm bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-accent/30 transition-all">
-                            <i data-lucide="shield-check" class="text-accent w-5 h-5 shrink-0"></i>
-                            Clínica Regulamentada
-                        </div>
-                    </div>
-                </div>
+                    <span class="text-3xl font-bold tracking-tight">DUNO<span class="text-accent">.</span></span>
+                </a>
+                <p class="text-slate-400 text-sm max-w-md mx-auto">Excelência profissional em Saúde Mental e Psicoterápica.<br> São Paulo/SP - Respeitando estritamente regras normativas do CRP.</p>
             </div>
-            
-            <div class="pt-12 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 gap-6">
-                <p>&copy; 2026 DUNO Psicologia. CRP PJ 00/00000. São Paulo/SP.</p>
-                <div class="flex gap-10">
-                    <a href="#" class="hover:text-white transition-colors">Termos de Sigilo</a>
-                    <a href="#" class="hover:text-white transition-colors">Políticas de Privacidade</a>
-                </div>
+            <div class="border-t border-white/5 pt-8 text-center text-slate-600 text-xs font-semibold">
+                &copy; 2026 DUNO Psicologia. Consulta de alto padrão.
             </div>
         </div>
     </footer>
 
-    <!-- 11. Floating WhatsApp -->
-    <a href="https://wa.me/5511992876219" target="_blank" class="fixed bottom-6 right-6 z-[60] animate-float">
-        <div class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-2xl whatsapp-pulse">
-            <svg style="width:2.2rem;height:2.2rem;fill:white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <!-- 11. Floating WhatsApp with text balloon -->
+    <div class="fixed bottom-6 right-6 z-[60] flex items-center gap-4">
+        <!-- Balão Tooltip (Visível Desktop) -->
+        <div class="hidden sm:flex bg-white text-slate-800 font-bold px-5 py-3 rounded-2xl shadow-2xl relative items-center justify-center animate-[float_4s_ease-in-out_infinite] border border-slate-100">
+            Precisa de ajuda? Fale agora!
+            <div class="absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[12px] border-l-white"></div>
         </div>
-    </a>
+        <!-- Botão Floating -->
+        <a href="https://wa.me/5511992876219" target="_blank" class="animate-float">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 bg-whatsapp hover:bg-whatsapp-hover rounded-full flex items-center justify-center text-white shadow-2xl whatsapp-pulse transition-all">
+                <svg style="width:45%;height:45%;fill:white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+        </a>
+    </div>
 
     <script>
         // Initialize Lucide Icons
@@ -938,7 +720,7 @@ Design profissional e altamente conversivo via WhatsApp
             }, 1000);
         });
 
-        // Intersection Observer para Animações de Scroll Profissionais (Fade + Slide)
+        // Intersection Observer para Animações
         const revealOptions = {
             threshold: 0.15,
             rootMargin: "0px 0px -50px 0px"
@@ -949,39 +731,13 @@ Design profissional e altamente conversivo via WhatsApp
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                 } else {
-                    entry.target.classList.remove('active'); // Permite re-animar ao subir/descer
+                    entry.target.classList.remove('active'); 
                 }
             });
         }, revealOptions);
 
         const reveals = document.querySelectorAll('.reveal');
         reveals.forEach(el => revealObserver.observe(el));
-
-        // Counter Animation
-        const counters = document.querySelectorAll('.counter');
-        const countSpeed = 200;
-
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const inc = target / countSpeed;
-
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            });
-        };
-
-        // Trigger counter when visible
-        const observer = new IntersectionObserver((entries) => {
-            if(entries[0].isIntersecting) animateCounters();
-        }, { threshold: 0.5 });
-        
-        if(counters.length > 0) observer.observe(counters[0].parentElement.parentElement);
     </script>
 </body>
 </html>
