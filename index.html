@@ -89,20 +89,36 @@ Design profissional focado 100% em conversão e usabilidade mobile.
         }
 
         .service-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            background: #0B1120;
             display: flex;
             flex-direction: column;
+            justify-content: end;
         }
         .service-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 40px 80px -15px rgba(59, 130, 246, 0.2);
-            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px -12px rgba(59, 130, 246, 0.4);
+            border-color: rgba(59, 130, 246, 0.5);
         }
-        .service-card:hover .service-icon {
-            transform: scale(1.1) rotate(5deg);
+        .service-card:hover .card-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);
         }
-        .service-card:hover img.card-img {
-            transform: scale(1.05);
+        .card-img-container {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.2) 100%);
+            transition: background 0.4s ease;
+        }
+        .card-content {
+            position: relative;
+            z-index: 2;
         }
 
         .whatsapp-pulse {
@@ -311,163 +327,123 @@ Design profissional focado 100% em conversão e usabilidade mobile.
                 <p class="text-slate-400 text-lg mb-8">Nossos especialistas focam naquilo que mais te aflige hoje para proporcionar autonomia amanhã. Qual é o seu momento?</p>
             </div>
 
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
                 <!-- Service 1: Terapia Individual -->
-                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 100ms;">
-                    <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?q=80&w=800&auto=format&fit=crop" alt="Terapia Individual" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110 opacity-70">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                <div class="group rounded-[2rem] border border-white/10 service-card reveal shadow-2xl min-h-[320px] sm:min-h-[380px]" style="transition-delay: 100ms;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?q=80&w=800&auto=format&fit=crop" alt="Terapia Individual" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70">
                     </div>
-                    <div class="p-10 flex flex-col items-center text-center flex-grow">
-                        <div class="flex justify-center items-center mb-4">
-                            <h4 class="text-2xl font-bold text-white tracking-tight">Terapia Individual</h4>
-                        </div>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Supere traumas e bloqueios emocionais</li>
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Construa uma melhor relação consigo mesmo</li>
-                        </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
-                             Agendar Consulta
+                    <div class="card-overlay"></div>
+                    <div class="card-content p-5 sm:p-6 flex flex-col items-center text-center">
+                        <h4 class="text-md sm:text-lg font-bold text-white tracking-widest uppercase mb-2">Terapia Individual</h4>
+                        <p class="text-slate-300 text-[10px] sm:text-xs mb-4 leading-relaxed line-clamp-2">Apoio especializado para superar traumas e construir sua melhor versão emocional.</p>
+                        <a href="https://wa.me/5511992876219" class="w-full py-3 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-2xl font-bold text-[10px] sm:text-xs transition-all flex items-center justify-center gap-2 shadow-lg">
+                             <i data-lucide="message-circle" class="w-4 h-4"></i> AGENDAR CONSULTA
                         </a>
                     </div>
                 </div>
 
                 <!-- Service 2: Terapia de Casal -->
-                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 200ms;">
-                    <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?q=80&w=800&auto=format&fit=crop" alt="Terapia de Casal" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110 opacity-70">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                <div class="group rounded-[2rem] border border-white/10 service-card reveal shadow-2xl min-h-[320px] sm:min-h-[380px]" style="transition-delay: 200ms;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?q=80&w=800&auto=format&fit=crop" alt="Terapia de Casal" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70">
                     </div>
-                    <div class="p-10 flex flex-col items-center text-center flex-grow">
-                        <div class="flex justify-center items-center mb-4">
-                            <h4 class="text-2xl font-bold text-white tracking-tight">Terapia de Casal</h4>
-                        </div>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Resgate o diálogo, paciência e a intimidade</li>
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Mediação inteligente para focar em soluções</li>
-                        </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
-                             Agendar Consulta
+                    <div class="card-overlay"></div>
+                    <div class="card-content p-5 sm:p-6 flex flex-col items-center text-center">
+                        <h4 class="text-md sm:text-lg font-bold text-white tracking-widest uppercase mb-2">Terapia de Casal</h4>
+                        <p class="text-slate-300 text-[10px] sm:text-xs mb-4 leading-relaxed line-clamp-2">Resgate o diálogo e a intimidade com mediação inteligente focada em soluções.</p>
+                        <a href="https://wa.me/5511992876219" class="w-full py-3 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-2xl font-bold text-[10px] sm:text-xs transition-all flex items-center justify-center gap-2 shadow-lg">
+                             <i data-lucide="message-circle" class="w-4 h-4"></i> AGENDAR CONSULTA
                         </a>
                     </div>
                 </div>
 
                 <!-- Service 3: Terapia Familiar -->
-                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 300ms;">
-                    <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop" alt="Terapia Familiar" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110 opacity-70">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                <div class="group rounded-[2rem] border border-white/10 service-card reveal shadow-2xl min-h-[320px] sm:min-h-[380px]" style="transition-delay: 300ms;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop" alt="Terapia Familiar" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70">
                     </div>
-                    <div class="p-10 flex flex-col items-center text-center flex-grow">
-                        <div class="flex justify-center items-center mb-4">
-                            <h4 class="text-2xl font-bold text-white tracking-tight">Terapia Familiar</h4>
-                        </div>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Intervenções ativas em crises ou lutos difíceis</li>
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Fortalecimento do respeito e vínculos vitais</li>
-                        </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
-                             Agendar Consulta
+                    <div class="card-overlay"></div>
+                    <div class="card-content p-5 sm:p-6 flex flex-col items-center text-center">
+                        <h4 class="text-md sm:text-lg font-bold text-white tracking-widest uppercase mb-2">Terapia Familiar</h4>
+                        <p class="text-slate-300 text-[10px] sm:text-xs mb-4 leading-relaxed line-clamp-2">Fortalecimento dos vínculos e respeito mútuo em momentos de crise familiar.</p>
+                        <a href="https://wa.me/5511992876219" class="w-full py-3 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-2xl font-bold text-[10px] sm:text-xs transition-all flex items-center justify-center gap-2 shadow-lg">
+                             <i data-lucide="message-circle" class="w-4 h-4"></i> AGENDAR CONSULTA
                         </a>
                     </div>
                 </div>
 
                 <!-- Service 4: Ansiedade e Estresse -->
-                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 400ms;">
-                    <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" alt="Ansiedade e Estresse" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110 opacity-70">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                <div class="group rounded-[2rem] border border-white/10 service-card reveal shadow-2xl min-h-[320px] sm:min-h-[380px]" style="transition-delay: 400ms;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" alt="Ansiedade e Estresse" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70">
                     </div>
-                    <div class="p-10 flex flex-col items-center text-center flex-grow">
-                        <div class="flex justify-center items-center mb-4">
-                            <h4 class="text-2xl font-bold text-white tracking-tight">Ansiedade / Pânico</h4>
-                        </div>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Pare os pensamentos acelerados com técnicas ativas</li>
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Ferramentas para controle de pânico, fobias, burnout</li>
-                        </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
-                             Agendar Consulta
+                    <div class="card-overlay"></div>
+                    <div class="card-content p-5 sm:p-6 flex flex-col items-center text-center">
+                        <h4 class="text-md sm:text-lg font-bold text-white tracking-widest uppercase mb-2">Ansiedade / Pânico</h4>
+                        <p class="text-slate-300 text-[10px] sm:text-xs mb-4 leading-relaxed line-clamp-2">Ferramentas práticas para controlar pensamentos acelerados e o esgotamento mental.</p>
+                        <a href="https://wa.me/5511992876219" class="w-full py-3 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-2xl font-bold text-[10px] sm:text-xs transition-all flex items-center justify-center gap-2 shadow-lg">
+                             <i data-lucide="message-circle" class="w-4 h-4"></i> AGENDAR CONSULTA
                         </a>
                     </div>
                 </div>
 
                 <!-- Service 5: Depressão -->
-                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 100ms;">
-                    <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=800&auto=format&fit=crop" alt="Depressão" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110 opacity-70">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                <div class="group rounded-[2rem] border border-white/10 service-card reveal shadow-2xl min-h-[320px] sm:min-h-[380px]" style="transition-delay: 100ms;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=800&auto=format&fit=crop" alt="Depressão" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70">
                     </div>
-                    <div class="p-10 flex flex-col items-center text-center flex-grow">
-                        <div class="flex justify-center items-center mb-4">
-                            <h4 class="text-2xl font-bold text-white tracking-tight">Depressão</h4>
-                        </div>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Abordagem compassiva focada em reerguer sua energia</li>
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Reconstrução da rotina clínica altamente profissional</li>
-                        </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
-                             Agendar Consulta
+                    <div class="card-overlay"></div>
+                    <div class="card-content p-5 sm:p-6 flex flex-col items-center text-center">
+                        <h4 class="text-md sm:text-lg font-bold text-white tracking-widest uppercase mb-2">Depressão</h4>
+                        <p class="text-slate-300 text-[10px] sm:text-xs mb-4 leading-relaxed line-clamp-2">Abordagem compassiva focada em reerguer sua energia e reconstruir sua rotina.</p>
+                        <a href="https://wa.me/5511992876219" class="w-full py-3 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-2xl font-bold text-[10px] sm:text-xs transition-all flex items-center justify-center gap-2 shadow-lg">
+                             <i data-lucide="message-circle" class="w-4 h-4"></i> AGENDAR CONSULTA
                         </a>
                     </div>
                 </div>
 
                 <!-- Service 6: Terapia para Adolescentes -->
-                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 200ms;">
-                    <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1507206130118-b5907f817163?q=80&w=800&auto=format&fit=crop" alt="Adolescentes" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110 opacity-70">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                <div class="group rounded-[2rem] border border-white/10 service-card reveal shadow-2xl min-h-[320px] sm:min-h-[380px]" style="transition-delay: 200ms;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1507206130118-b5907f817163?q=80&w=800&auto=format&fit=crop" alt="Adolescentes" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70">
                     </div>
-                    <div class="p-10 flex flex-col items-center text-center flex-grow">
-                        <div class="flex justify-center items-center mb-4">
-                            <h4 class="text-2xl font-bold text-white tracking-tight">Adolescentes</h4>
-                        </div>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Maneje bullying, pressões e crises da juventude</li>
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Ajude seu filho(a) hoje com terapeutas especialistas</li>
-                        </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
-                             Agendar Consulta
+                    <div class="card-overlay"></div>
+                    <div class="card-content p-5 sm:p-6 flex flex-col items-center text-center">
+                        <h4 class="text-md sm:text-lg font-bold text-white tracking-widest uppercase mb-2">Adolescentes</h4>
+                        <p class="text-slate-300 text-[10px] sm:text-xs mb-4 leading-relaxed line-clamp-2">Apoio para manejar pressões sociais e crises típicas da juventude.</p>
+                        <a href="https://wa.me/5511992876219" class="w-full py-3 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-2xl font-bold text-[10px] sm:text-xs transition-all flex items-center justify-center gap-2 shadow-lg">
+                             <i data-lucide="message-circle" class="w-4 h-4"></i> AGENDAR CONSULTA
                         </a>
                     </div>
                 </div>
 
                 <!-- Service 7: Autoconhecimento -->
-                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 300ms;">
-                    <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800&auto=format&fit=crop" alt="Autoconhecimento" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110 opacity-70">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                <div class="group rounded-[2rem] border border-white/10 service-card reveal shadow-2xl min-h-[320px] sm:min-h-[380px]" style="transition-delay: 300ms;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800&auto=format&fit=crop" alt="Autoconhecimento" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70">
                     </div>
-                    <div class="p-10 flex flex-col items-center text-center flex-grow">
-                        <div class="flex justify-center items-center mb-4">
-                            <h4 class="text-2xl font-bold text-white tracking-tight">Autoconhecimento</h4>
-                        </div>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Crie melhores decisões expandindo horizontes</li>
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Torne-se mais resiliente, objetivo e inteligente</li>
-                        </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
-                             Agendar Consulta
+                    <div class="card-overlay"></div>
+                    <div class="card-content p-5 sm:p-6 flex flex-col items-center text-center">
+                        <h4 class="text-md sm:text-lg font-bold text-white tracking-widest uppercase mb-2">Autoconhecimento</h4>
+                        <p class="text-slate-300 text-[10px] sm:text-xs mb-4 leading-relaxed line-clamp-2">Expanda seus horizontes para tomar melhores decisões e ser mais resiliente.</p>
+                        <a href="https://wa.me/5511992876219" class="w-full py-3 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-2xl font-bold text-[10px] sm:text-xs transition-all flex items-center justify-center gap-2 shadow-lg">
+                             <i data-lucide="message-circle" class="w-4 h-4"></i> AGENDAR CONSULTA
                         </a>
                     </div>
                 </div>
 
                 <!-- Service 8: Atendimento Online -->
-                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 400ms;">
-                    <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800&auto=format&fit=crop" alt="Atendimento Online" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110 opacity-70">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                <div class="group rounded-[2rem] border border-white/10 service-card reveal shadow-2xl min-h-[320px] sm:min-h-[380px]" style="transition-delay: 400ms;">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800&auto=format&fit=crop" alt="Atendimento Online" loading="lazy" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70">
                     </div>
-                    <div class="p-10 flex flex-col items-center text-center flex-grow">
-                        <div class="flex justify-center items-center mb-4">
-                            <h4 class="text-2xl font-bold text-white tracking-tight">Atendimento Online</h4>
-                        </div>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Para rotinas corridas. Fale com seu psicólogo do conforto de onde estiver.</li>
-                            <li class="flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0"></i> Sigilo digital inquebrável, segurança máxima.</li>
-                        </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto">
-                             Agendar Consulta
+                    <div class="card-overlay"></div>
+                    <div class="card-content p-5 sm:p-6 flex flex-col items-center text-center">
+                        <h4 class="text-md sm:text-lg font-bold text-white tracking-widest uppercase mb-2">Atendimento Online</h4>
+                        <p class="text-slate-300 text-[10px] sm:text-xs mb-4 leading-relaxed line-clamp-2">Sigilo inquebrável e segurança máxima para realizar sua terapia de qualquer lugar.</p>
+                        <a href="https://wa.me/5511992876219" class="w-full py-3 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-2xl font-bold text-[10px] sm:text-xs transition-all flex items-center justify-center gap-2 shadow-lg">
+                             <i data-lucide="message-circle" class="w-4 h-4"></i> AGENDAR CONSULTA
                         </a>
                     </div>
                 </div>
