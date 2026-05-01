@@ -250,8 +250,8 @@ Design profissional focado 100% em conversão e usabilidade mobile.
     <!-- 3. Hero Section (Foco Conversão) -->
     <section id="inicio" class="relative min-h-[85vh] sm:min-h-screen flex items-center bg-primary overflow-hidden">
         <div class="absolute inset-0 z-0 bg-primary">
-            <img src="/images/banner01 (2).png" alt="Consultório de Psicologia" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-[75%_center] sm:object-center opacity-60">
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent sm:bg-gradient-to-r sm:from-primary/95 sm:via-primary/50 sm:to-transparent"></div>
+            <img src="/images/banner01 (2).png" alt="Consultório de Psicologia" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-[75%_center] sm:object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent sm:bg-gradient-to-r sm:from-primary/90 sm:via-primary/40 sm:to-transparent"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10 pt-20">
@@ -572,6 +572,36 @@ Design profissional focado 100% em conversão e usabilidade mobile.
                     </button>
                     <div x-show="openFaq === 2" x-collapse class="px-8 pb-6 text-slate-600 bg-white leading-relaxed">
                         Claro. Rigoroso contrato de sigilo protegido pelo Conselho Regional de Psicologia. Sua segurança inicial é a prioridade.
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="faq-card bg-white rounded-2xl reveal overflow-hidden border border-slate-200">
+                    <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full px-8 py-6 flex items-center justify-between text-left transition-all">
+                        <span class="font-bold text-lg text-primary">Como funciona a primeira consulta?</span>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-300" :class="openFaq === 3 ? 'rotate-45' : ''"></i>
+                    </button>
+                    <div x-show="openFaq === 3" x-collapse class="px-8 pb-6 text-slate-600 bg-white leading-relaxed">
+                        A primeira sessão é dedicada ao acolhimento e escuta da sua história. Entendemos suas queixas principais para definirmos juntos o melhor plano terapêutico, sem julgamentos.
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="faq-card bg-white rounded-2xl reveal overflow-hidden border border-slate-200">
+                    <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full px-8 py-6 flex items-center justify-between text-left transition-all">
+                        <span class="font-bold text-lg text-primary">Vocês atendem por plano de saúde?</span>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-300" :class="openFaq === 4 ? 'rotate-45' : ''"></i>
+                    </button>
+                    <div x-show="openFaq === 4" x-collapse class="px-8 pb-6 text-slate-600 bg-white leading-relaxed">
+                        Nossos atendimentos são particulares para garantir um padrão premium de cuidado. No entanto, fornecemos recibos detalhados para que você possa solicitar o reembolso diretamente com seu convênio.
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="faq-card bg-white rounded-2xl reveal overflow-hidden border border-slate-200">
+                    <button @click="openFaq = openFaq === 5 ? null : 5" class="w-full px-8 py-6 flex items-center justify-between text-left transition-all">
+                        <span class="font-bold text-lg text-primary">A terapia online funciona mesmo?</span>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-300" :class="openFaq === 5 ? 'rotate-45' : ''"></i>
+                    </button>
+                    <div x-show="openFaq === 5" x-collapse class="px-8 pb-6 text-slate-600 bg-white leading-relaxed">
+                        Sim! Estudos científicos demonstram que a psicoterapia online possui a mesma eficácia clínica da modalidade presencial, oferecendo ainda as vantagens de economia de tempo, discrição e conforto.
                     </div>
                 </div>
             </div>
