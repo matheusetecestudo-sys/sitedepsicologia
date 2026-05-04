@@ -182,19 +182,6 @@ Design profissional focado 100% em conversão e usabilidade mobile.
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans selection:bg-accent selection:text-white" x-data="{ mobileMenu: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 50)">
 
-    <!-- 1. Splash Screen -->
-    <div id="splash" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-primary transition-opacity duration-700">
-        <div class="mb-8 flex items-center gap-3 animate-pulse">
-            <div class="bg-accent p-3 rounded-2xl shadow-lg shadow-accent/20">
-                <i data-lucide="brain-circuit" class="w-12 h-12 text-white"></i>
-            </div>
-            <h1 class="text-4xl font-bold text-white tracking-tighter italic">DUNO<span class="text-accent">!</span></h1>
-        </div>
-        <div class="w-64 h-1 bg-slate-800 rounded-full overflow-hidden">
-            <div id="progress" class="h-full bg-accent transition-all duration-[800ms] w-0 shadow-[0_0_15px_#3b82f6]"></div>
-        </div>
-        <p class="mt-4 text-slate-400 text-[10px] font-bold tracking-[0.3em] uppercase">Preparando Experiência Acolhedora...</p>
-    </div>
 
     <!-- 2. Sticky Header -->
     <header :class="scrolled ? 'glass-header py-3' : 'bg-transparent py-5'" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
@@ -746,19 +733,6 @@ Design profissional focado 100% em conversão e usabilidade mobile.
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
-
-        // Splash Screen Logic
-        window.addEventListener('load', () => {
-            const progress = document.getElementById('progress');
-            const splash = document.getElementById('splash');
-            
-            progress.style.width = '100%';
-            
-            setTimeout(() => {
-                splash.style.opacity = '0';
-                setTimeout(() => splash.remove(), 700);
-            }, 1000);
-        });
 
         // Intersection Observer para Animações
         const revealOptions = {
